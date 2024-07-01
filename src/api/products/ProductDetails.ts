@@ -15,6 +15,7 @@ export class ProductDetails extends BaseDetails<
     data.product || undefined;
 
   query = (variables: ProductDetailsVariables) =>
+    // @ts-ignore
     this.client!.query<ProductDetailsQuery, ProductDetailsVariables>({
       query: productDetails,
       variables,
